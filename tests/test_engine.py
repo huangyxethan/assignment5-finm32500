@@ -41,7 +41,7 @@ def test_engine_handles_broker_failure(broker,rising_prices):
     fake_strategy = MagicMock()
     signals = pd.Series(0, index=rising_prices.index)#len==15
     signals.iloc[10] = 1
-    signals.iloc[12] = 1 # fail
+    signals.iloc[12] = 1 
     signals.iloc[14] = 1
     fake_strategy.signals.return_value = signals
 
